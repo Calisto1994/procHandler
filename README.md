@@ -46,3 +46,7 @@ or like this:
         Long pid = proc.pid;
     }
 ```
+
+### Example ###
+
+The `Main.java` class file contains an example use-case for `procHandler.java`. Feel free to try it.
