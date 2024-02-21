@@ -17,6 +17,7 @@ public class Main2 {
         if (command == null) System.exit(1); // If cancel button is clicked, end program
         try {
             stdOut = proc.shell_exec(command).stdOut;
+            // you may also run the command and query just stdOut / stdErr / exitCode / pid directly.
         } catch (Exception ioe) {
             System.out.println("Error!");
             ioe.printStackTrace();
