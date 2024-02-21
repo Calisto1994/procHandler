@@ -14,7 +14,8 @@ public class Main {
         try {
             proc.shell_exec(command);
         } catch (Exception ioe) {
-            System.out.println("Fehler!");
+            System.out.println("Error!");
+            ioe.printStackTrace();
         }
 
         if (proc.pid != 0)  // Check if execution was successful
