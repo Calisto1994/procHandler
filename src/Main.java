@@ -27,5 +27,6 @@ public class Main {
             JOptionPane.showMessageDialog(null, proc.stdOut, command, JOptionPane.INFORMATION_MESSAGE);
         if (!proc.stdErr.isEmpty())
             JOptionPane.showMessageDialog(null, proc.stdErr, command, JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
