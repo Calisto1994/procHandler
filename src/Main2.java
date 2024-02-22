@@ -16,7 +16,7 @@ public class Main2 {
         String command = JOptionPane.showInputDialog(null, "Befehl:", "uname -a");
         if (command == null) System.exit(1); // If cancel button is clicked, end program
         try {
-            stdOut = proc.shell_exec(command).stdOut;
+            stdOut = proc.shell_exec(command).stdOut; // SHORTENED: Fetch only stdOut
             // you may also run the command and query just stdOut / stdErr / exitCode / pid directly.
         } catch (Exception ioe) {
             System.out.println("Error!");
