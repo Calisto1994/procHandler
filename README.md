@@ -50,3 +50,5 @@ or like this:
 ### Example ###
 
 The `Main.java` class file contains an example use-case for `procHandler.java`. Feel free to try it.
+The `Main_.kt` class file is written in _Kotlin_ language to showcase the difference between using the Java class with
+other _Java_ code or to use it with _Kotlin_ code.
