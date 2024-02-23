@@ -50,7 +50,3 @@ or like this:
 ### Example ###
 
 The `Main.java` class file contains an example use-case for `procHandler.java`. Feel free to try it.
-
-### Example 2 ###
-
-If you only need `stdOut` (or `stdErr`, would work the same way), check out `Main2.java`
