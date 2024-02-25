@@ -52,3 +52,16 @@ or like this:
 The `Main.java` class file contains an example use-case for `procHandler.java`. Feel free to try it.
 The `Main_.kt` class file is written in _Kotlin_ language to showcase the difference between using the Java class with
 other _Java_ code or to use it with _Kotlin_ code.
+
+### Inclusion of Shells (bash, zsh) ###
+You may also use the `procHandler` class to include Shell scripts to your Java application or
+to call commands that would only be available from within a shell like `Bash` or `zsh`:
+
+```java
+public static voic Main (String[] args) {
+    procHandler proc = new procHandler();
+    String[] command = {"bash", "-c", String.format("\"%s\"", "/path/to/your/shellscript.sh")};
+    proc.shell_exec(command);
+    JOptionPane.showMessageDialog(null, proc.stdOut, null, JOptionPane.INFORMATION_MESSAGE);
+}  
+```
