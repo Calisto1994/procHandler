@@ -16,11 +16,11 @@ public class procHandler {
     public long pid = 0;
     public int exitCode = 0;
 
-    public procHandler shell_exec (String command) throws InterruptedException { // Run a command, return its stdOut
+    public procHandler shell_exec (String[] command) throws InterruptedException { // Run a command, return its stdOut
         String[] results = {new String(), new String()};
         String result = new String();
         try {
-            Process process = Runtime.getRuntime().exec(procHandler.StrtoStrA(command));
+            Process process = Runtime.getRuntime().exec(command);
             if (waitFor) {   // Only if .waitFor(true) was declared, use a blocking process
                 process.waitFor();
                 this.exitCode = process.exitValue();
@@ -38,6 +38,9 @@ public class procHandler {
             this.stdErr = "Error: Process execution failed.";
         }
         return(this);
+    }
+    public procHandler shell_exec (String command) throws InterruptedException { // String instead of String Array;
+        return shell_exec(StrtoStrA(command));
     }
 
     // INPUTSTREAM OPERATIONS
