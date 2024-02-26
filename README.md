@@ -20,6 +20,13 @@ But if you want to get the `exitCode`, too, you'll have to declare the process a
     Long pid = proc.pid; int exitCode = proc.exitCode;
 ```
 
+### ProcessID `pid` problem ###
+
+The current release of Java that is recommended to end-users is Java 8 (at the time of writing this line, it was Java 8 Update 401, to be exact);
+Java 8 does **not** support to query the process id of a task that it has launched — therefore, `this.pid = process.pid();` query has been *quoted* in `procHandler.java` in order to maintain compatibility with Java 8.
+
+If you're using a more recent release of Java (e.g. OpenJDK 21 (including Java 21 Runtime)), you may unquote the line to get access to the process id when using `procHandler` in your project.
+
 ## Using the Class ##
 To use the `procHandler.java` class, you'll have to use `try` and `catch` or include `throws InterruptedException` to your function, like this:
 
