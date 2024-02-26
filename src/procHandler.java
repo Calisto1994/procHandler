@@ -28,7 +28,8 @@ public class procHandler {
 
             this.stdOut = scanStream(process.getInputStream());
             this.stdErr = scanStream(process.getErrorStream());
-            this.pid = process.pid();
+            // this.pid = process.pid();
+            // Compatibility with Java 8: `pid` can't be queried in versions before Java 9.
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
