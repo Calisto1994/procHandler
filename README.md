@@ -65,7 +65,7 @@ You may also use the `procHandler` class to include Shell scripts to your Java a
 to call commands that would only be available from within a shell like `Bash` or `zsh`:
 
 ```java
-public static voic Main (String[] args) {
+public static void Main (String[] args) {
     procHandler proc = new procHandler();
     String[] command = {"bash", "-c", String.format("\"%s\"", "/path/to/your/shellscript.sh")};
     proc.shell_exec(command);
