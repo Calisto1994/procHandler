@@ -28,7 +28,8 @@ public class procHandler {
 
             this.stdOut = scanStream(process.getInputStream());
             this.stdErr = scanStream(process.getErrorStream());
-            this.pid = process.pid();
+            // this.pid = process.pid();
+            // Compatibility: See README
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
