@@ -28,8 +28,9 @@ public class procHandler {
 
             this.stdOut = scanStream(process.getInputStream());
             this.stdErr = scanStream(process.getErrorStream());
-            // this.pid = process.pid();
-            // Compatibility: See README
+            this.pid = process.pid();
+            // Compatibility: If you want to run this on Java 8 (or any other pre-Java 21 release),
+            // quote the line "this.pid = process.pid();" to allow for compatibility with these earlier releases.
 
         } catch (IOException ioe) {
             ioe.printStackTrace();
