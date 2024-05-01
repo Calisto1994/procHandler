@@ -24,9 +24,9 @@ public class Main {
         else
             System.out.println("Execution error: No Process ID returned.");
 
-        if (!proc.stdOut.isEmpty())
-            JOptionPane.showMessageDialog(null, proc.stdOut, command, JOptionPane.INFORMATION_MESSAGE);
         if (!proc.stdErr.isEmpty())
             JOptionPane.showMessageDialog(null, proc.stdErr, command, JOptionPane.ERROR_MESSAGE);
+        if (!proc.stdOut.isEmpty())
+            JOptionPane.showMessageDialog(null, proc.stdOut, command, JOptionPane.INFORMATION_MESSAGE);
     }
 }
