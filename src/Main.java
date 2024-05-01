@@ -10,9 +10,10 @@ public class Main {
         procHandler proc = new procHandler()
                 .waitFor(true);
         String command = JOptionPane.showInputDialog(null, "Befehl:", "uname -a");
+        String[] commandA = {"bash", "-c", command};
         if (command == null) System.exit(1); // If cancel button is clicked, end program
         try {
-            proc.shell_exec(command);
+            proc.shell_exec(commandA);
         } catch (Exception ioe) {
             System.out.println("Error!");
             ioe.printStackTrace();
